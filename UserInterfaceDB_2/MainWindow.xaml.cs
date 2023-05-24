@@ -27,7 +27,7 @@ namespace UserInterfaceDB_2
 
         private void Button_Click_Save_Cgd(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\UserInterfaceDB_2\UserInterfaceDB_2\SavedFiles\CGD.png"))
+            if (File.Exists(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\DB_2_2\UserInterfaceDB_2\SavedFiles\CGD.png"))
                 bezier2.SaveSVG();
         }
 
@@ -48,10 +48,17 @@ namespace UserInterfaceDB_2
             d2.SetY((float)rand.Next(0, 700));
 
             bezier2 = new Bezier(a2, b2, c2, d2);
+            
             bezier2.SetDrawer(new CGDrawer());
-            scheme_s.Source = null;
             bezier2.Draw();
-            scheme_s.Source = new BitmapImage(new Uri(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\UserInterfaceDB_2\UserInterfaceDB_2\SavedFiles\CGD.png"));
+
+            BitmapImage bitMap = new BitmapImage();
+            bitMap.BeginInit();
+            bitMap.UriSource = new Uri(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\DB_2_2\UserInterfaceDB_2\SavedFiles\CGD.png");
+            bitMap.CacheOption = BitmapCacheOption.OnLoad;
+            bitMap.EndInit();
+
+            scheme_f.Source = bitMap;
         }
 
         public MainWindow()
@@ -76,15 +83,23 @@ namespace UserInterfaceDB_2
             d1.SetY((float)rand.Next(0, 700));
 
             bezier1 = new Bezier(a1, b1, c1, d1);
+            
             bezier1.SetDrawer(new CBDrawer());
-            scheme_f.Source = null;
             bezier1.Draw();
-            scheme_f.Source = new BitmapImage(new Uri(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\UserInterfaceDB_2\UserInterfaceDB_2\SavedFiles\CBD.png"));
+
+            BitmapImage bitMap = new BitmapImage();
+            bitMap.BeginInit();
+            bitMap.UriSource = new Uri(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\DB_2_2\UserInterfaceDB_2\SavedFiles\CBD.png");
+            bitMap.CacheOption = BitmapCacheOption.OnLoad;
+            bitMap.EndInit();
+            
+            scheme_f.Source = bitMap;
+            scheme_f.UpdateLayout();
         }
 
         private void Button_Click_Save_Cbd(object sender, RoutedEventArgs e)
         {
-            if (File.Exists(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\UserInterfaceDB_2\UserInterfaceDB_2\SavedFiles\CBD.png"))
+            if (File.Exists(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\DB_2_2\UserInterfaceDB_2\SavedFiles\CBD.png"))
                 bezier1.SaveSVG();
         }
     }

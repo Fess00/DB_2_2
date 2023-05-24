@@ -33,13 +33,13 @@ public class CGDrawer : Drawer
             }
         }
         g.DrawBezier(greenPen, lp[0], lp[1], lp[2], lp[3]);
-        bmp.Save(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\UserInterfaceDB_2\UserInterfaceDB_2\SavedFiles\CGD.png", System.Drawing.Imaging.ImageFormat.Png);
+        bmp.Save(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\DB_2_2\UserInterfaceDB_2\SavedFiles\CGD.png", System.Drawing.Imaging.ImageFormat.Png);
         g.Dispose();
     }
 
     public override void SaveSVG()
     {
-        string documentContent = $"<svg width=\"{1000}\" height=\"{700}\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"{(int)lp[0].X}\" cy=\"{(int)lp[0].Y}\" r=\"2\" fill=\"green\"/><path d=\"M {lp[0].X} {lp[0].Y} C {lp[1].X} {lp[1].Y}, {lp[2].X} {lp[2].Y}, {lp[3].X} {lp[3].Y}\" stroke=\"green\" fill=\"transparent\"/></svg>";
-        File.WriteAllText(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\UserInterfaceDB_2\UserInterfaceDB_2\SavedFiles\CGD.svg", documentContent);  
+        string documentContent = $"<svg width=\"{1000}\" height=\"{700}\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"{(int)lp[0].X}\" cy=\"{(int)lp[0].Y}\" r=\"2\" fill=\"green\"/><path d=\"M {(int)lp[0].X} {(int)lp[0].Y} C {(int)lp[1].X} {(int)lp[1].Y}, {(int)lp[2].X} {(int)lp[2].Y}, {(int)lp[3].X} {(int)lp[3].Y}\" stroke=\"green\" fill=\"transparent\"/></svg>";
+        File.WriteAllText(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\DB_2_2\UserInterfaceDB_2\SavedFiles\CGD.svg", documentContent);  
     }
 }

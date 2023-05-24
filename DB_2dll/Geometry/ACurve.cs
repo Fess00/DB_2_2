@@ -1,14 +1,6 @@
 public abstract class ACurve : ICurve
 {
-    protected IPoint a, b;
-
-    protected IDrawer drawer;
-
-    public ACurve(IPoint a, IPoint b)
-    {
-        this.a = a;
-        this.b = b;
-    }
+    private IDrawer drawer;
 
     public void SetDrawer(IDrawer drawer)
     {

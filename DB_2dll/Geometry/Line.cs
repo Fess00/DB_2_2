@@ -1,9 +1,9 @@
 using System;
 public class Line : ACurve
 {
-    //IPoint a, b;
+    IPoint a, b;
 
-    public Line(IPoint a, IPoint b) : base(a, b)
+    public Line(IPoint a, IPoint b)
     {
         this.a = a;
         this.b = b;

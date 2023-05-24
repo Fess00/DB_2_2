@@ -32,7 +32,7 @@ public class CBDrawer : Drawer
             }
         }
         g.DrawBezier(blackPen, lp[0], lp[1], lp[2], lp[3]);
-        bmp.Save(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\UserInterfaceDB_2\UserInterfaceDB_2\SavedFiles\CBD.png", System.Drawing.Imaging.ImageFormat.Png);
+        bmp.Save(@"C:\Users\User\Documents\Code\C#\UserInterfaceDB_2\DB_2_2\UserInterfaceDB_2\SavedFiles\CBD.png", System.Drawing.Imaging.ImageFormat.Png);
         g.Dispose();
     }
 

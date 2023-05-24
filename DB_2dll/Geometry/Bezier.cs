@@ -2,9 +2,9 @@ using System;
 
 public class Bezier : ACurve
 {
-    private IPoint c, d;
+    private IPoint a, b, c, d;
 
-    public Bezier(IPoint a, IPoint b, IPoint c, IPoint d) : base(a, b)
+    public Bezier(IPoint a, IPoint b, IPoint c, IPoint d)
     {
         this.a = a;
         this.b = b;
